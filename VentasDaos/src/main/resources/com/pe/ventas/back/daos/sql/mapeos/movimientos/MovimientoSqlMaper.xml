@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pe.ventas.back.daos.sql.mapeos.movimientos.MovimientoSqlMaper">
+
+	<select id="selectTodosMovimientos"  resultType="com.pe.ventas.back.dtos.daos.sql.movimientos.MovimientoSqlDto">
+		SELECT * FROM 
+		ventas.movimientos
+	</select>
+
+
+	<select id="selectUnMovimiento" parameterType="com.pe.ventas.back.dtos.daos.sql.movimientos.MovimientoSqlDto"  resultType="com.pe.ventas.back.dtos.daos.sql.movimientos.MovimientoSqlDto">
+		SELECT * FROM 
+		ventas.movimientos
+		<where>
+			<if test="movimientoCodigo != null">movimientoCodigo=#{movimientoCodigo,jdbcType=INTEGER}</if>
+			<if test="almacenCodOrigen != null"> AND almacenCodOrigen=#{almacenCodOrigen,jdbcType=VARCHAR}</if>
+			<if test="almacenCodDestino != null"> AND almacenCodDestino=#{almacenCodDestino,jdbcType=VARCHAR}</if>
+			
+		</where>
+	</select>
+
+	<insert id="insert" parameterType="com.pe.ventas.back.dtos.daos.sql.movimientos.MovimientoSqlDto" useGeneratedKeys="true" keyProperty="movimientoCodigo">
+		INSERT INTO 
+		ventas.movimientos 
+		(
+			movimientoFecha,
+			almacenCodOrigen,
+			almacenCodDestino,
+			movimientoComentario
+			<if test="movimientoFecre != null">,movimientoFecre</if>
+			<if test="movimientoUscre != null">,movimientoUscre</if>
+			<if test="movimientoFemod != null">,movimientoFemod</if>
+			<if test="movimientoUsmod != null">,movimientoUsmod</if>
+		) 
+		VALUES(
+			#{movimientoFecha,jdbcType=TIMESTAMP},
+			#{almacenCodOrigen,jdbcType=VARCHAR},
+			#{almacenCodDestino,jdbcType=VARCHAR},
+			#{movimientoComentario,jdbcType=VARCHAR}
+			<if test="movimientoFecre != null">,#{movimientoFecre,jdbcType=TIMESTAMP}</if>
+			<if test="movimientoUscre != null">,#{movimientoUscre,jdbcType=VARCHAR}</if>
+			<if test="movimientoFemod != null">,#{movimientoFemod,jdbcType=TIMESTAMP}</if>
+			<if test="movimientoUsmod != null">,#{movimientoUsmod,jdbcType=VARCHAR}</if>
+		)
+	</insert>
+	
+	<update id="update" parameterType="com.pe.ventas.back.dtos.daos.sql.movimientos.MovimientoSqlDto">
+		UPDATE 
+		ventas.movimientos  
+		<set>
+			<if test="movimientoFecha != null">movimientoFecha=#{movimientoFecha,jdbcType=TIMESTAMP}</if>
+			<if test="almacenCodOrigen != null">,almacenCodOrigen=#{almacenCodOrigen,jdbcType=VARCHAR}</if>
+			<if test="almacenCodDestino != null">,almacenCodDestino=#{almacenCodDestino,jdbcType=VARCHAR}</if>
+			<if test="movimientoComentario != null">,movimientoComentario=#{movimientoComentario,jdbcType=VARCHAR}</if>
+			<if test="movimientoFecre != null">,#{movimientoFecre,jdbcType=TIMESTAMP}</if>
+			<if test="movimientoUscre != null">,#{movimientoUscre,jdbcType=VARCHAR}</if>
+			<if test="movimientoFemod != null">,#{movimientoFemod,jdbcType=TIMESTAMP}</if>
+			<if test="movimientoUsmod != null">,#{movimientoUsmod,jdbcType=VARCHAR}</if>
+		</set>  
+		where movimientoCodigo=#{movimientoCodigo,jdbcType=INTEGER}
+	</update>
+	
+	<delete id="delete" parameterType="com.pe.ventas.back.dtos.daos.sql.movimientos.MovimientoSqlDto">
+		DELETE FROM 
+		ventas.movimientos  
+		<where>
+			<if test="movimientoCodigo != null">movimientoCodigo=#{movimientoCodigo,jdbcType=INTEGER}</if>
+			<if test="almacenCodOrigen != null"> AND almacenCodOrigen=#{almacenCodOrigen,jdbcType=VARCHAR}</if>
+			<if test="almacenCodDestino != null"> AND almacenCodDestino=#{almacenCodDestino,jdbcType=VARCHAR}</if>
+		</where>
+	</delete>
+
+</mapper>

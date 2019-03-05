@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pe.ventas.back.daos.sql.mapeos.movimientoproducto.MovimientoProductoSqlMaper">
+
+	<select id="selectTodosMovimientoProducto"  resultType="com.pe.ventas.back.dtos.daos.sql.movimientoproducto.MovimientoProductoSqlDto">
+		SELECT * FROM 
+		ventas.movimientoproducto
+	</select>
+
+
+	<select id="selectUnMovimientoProducto" parameterType="com.pe.ventas.back.dtos.daos.sql.movimientoproducto.MovimientoProductoSqlDto"  resultType="com.pe.ventas.back.dtos.daos.sql.movimientoproducto.MovimientoProductoSqlDto">
+		SELECT * FROM 
+		ventas.movimientoproducto
+		<where>
+			<if test="movimientoCodigo != null">movimientoCodigo=#{movimientoCodigo,jdbcType=INTEGER}</if>
+			<if test="productoCodigo != null"> AND productoCodigo=#{productoCodigo,jdbcType=VARCHAR}</if>
+			
+		</where>
+	</select>
+
+	<insert id="insert" parameterType="com.pe.ventas.back.dtos.daos.sql.movimientoproducto.MovimientoProductoSqlDto" >
+		INSERT INTO 
+		ventas.movimientoproducto 
+		(
+			movimientoCodigo,
+			productoCodigo
+			<if test="movimientoProductoCant != null">,movimientoProductoCant</if>
+		) 
+		VALUES(
+			#{movimientoCodigo,jdbcType=INTEGER},
+			#{productoCodigo,jdbcType=INTEGER}
+			<if test="movimientoProductoCant != null">,#{movimientoProductoCant,jdbcType=INTEGER}</if>
+		)
+	</insert>
+	
+	<update id="update" parameterType="com.pe.ventas.back.dtos.daos.sql.movimientoproducto.MovimientoProductoSqlDto">
+		UPDATE 
+		ventas.movimientoproducto  
+		<set>
+			<if test="movimientoProductoCant != null">movimientoProductoCant=#{movimientoProductoCant,jdbcType=INTEGER}</if>			
+		</set>  
+		where movimientoCodigo=#{movimientoCodigo,jdbcType=INTEGER}
+		and   productoCodigo=#{productoCodigo,jdbcType=INTEGER}
+	</update>
+	
+	<delete id="delete" parameterType="com.pe.ventas.back.dtos.daos.sql.movimientoproducto.MovimientoProductoSqlDto">
+		DELETE FROM 
+		ventas.movimientoproducto  
+		<where>
+			<if test="movimientoCodigo != null">movimientoCodigo=#{movimientoCodigo,jdbcType=INTEGER}</if>
+			<if test="productoCodigo != null"> AND productoCodigo=#{productoCodigo,jdbcType=INTEGER}</if>
+		</where>
+	</delete>
+
+</mapper>

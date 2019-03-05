@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pe.ventas.back.daos.sql.mapeos.ventas.VentaSqlMaper">
+
+	<select id="selectTodosVentas"  resultType="com.pe.ventas.back.dtos.daos.sql.ventas.VentaSqlDto">
+		SELECT * FROM 
+		ventas.ventas
+	</select>
+
+
+	<select id="selectUnaVenta" parameterType="com.pe.ventas.back.dtos.daos.sql.ventas.VentaSqlDto"  resultType="com.pe.ventas.back.dtos.daos.sql.ventas.VentaSqlDto">
+		SELECT * FROM 
+		ventas.ventas
+		<where>
+			<if test="ventaCodigo != null">ventaCodigo=#{ventaCodigo,jdbcType=INTEGER}</if>			
+		</where>
+	</select>
+
+	<insert id="insert" parameterType="com.pe.ventas.back.dtos.daos.sql.ventas.VentaSqlDto" useGeneratedKeys="true" keyProperty="ventaCodigo">
+		INSERT INTO 
+		ventas.ventas 
+		(
+			ventaFecha,
+			almacenCodigo,
+			vendedorCodigo,
+			monedaCodigo,
+			ventaSubTotal,
+			ventaDescuento,
+			ventaTotal,
+			ventaEfectivo,
+			ventaTarjeta,
+			ventaReferTarjeta,
+			ventaComentario,
+			ventaEstado,
+			<if test="ventaFecre != null">,ventaFecre</if>
+			<if test="ventaUscre != null">,ventaUscre</if>
+			<if test="ventaFemod != null">,ventaFemod</if>
+			<if test="ventaUsmod != null">,ventaUsmod</if>
+		) 
+		VALUES(
+			#{ventaFecha,jdbcType=TIMESTAMP},
+			#{almacenCodigo,jdbcType=INTEGER},
+			#{vendedorCodigo,jdbcType=INTEGER},
+			#{monedaCodigo,jdbcType=VARCHAR},
+			#{ventaSubTotal,jdbcType=DOUBLE},
+			#{ventaDescuento,jdbcType=DOUBLE},
+			#{ventaTotal,jdbcType=DOUBLE},
+			#{ventaEfectivo,jdbcType=DOUBLE},
+			#{ventaTarjeta,jdbcType=DOUBLE},
+			#{ventaReferTarjeta,jdbcType=VARCHAR},
+			#{ventaComentario,jdbcType=VARCHAR},			
+			#{ventaEstado,jdbcType=VARCHAR}
+			<if test="ventaFecre != null">,#{VentaFecre,jdbcType=TIMESTAMP}</if>
+			<if test="ventaUscre != null">,#{VentaUscre,jdbcType=VARCHAR}</if>
+			<if test="ventaFemod != null">,#{VentaFemod,jdbcType=TIMESTAMP}</if>
+			<if test="ventaUsmod != null">,#{VentaUsmod,jdbcType=VARCHAR}</if>
+		)
+	</insert>
+	
+	<update id="update" parameterType="com.pe.ventas.back.dtos.daos.sql.ventas.VentaSqlDto">
+		UPDATE 
+		ventas.ventas  
+		<set>
+			<if test="ventaFecha != null">ventaFecha=#{ventaFecha,jdbcType=TIMESTAMP}</if>
+			<if test="almacenCodigo != null">,almacenCodigo=#{almacenCodigo,jdbcType=INTEGER}</if>
+			<if test="vendedorCodigo != null">,vendedorCodigo=#{vendedorCodigo,jdbcType=INTEGER}</if>
+			<if test="monedaCodigo != null">,monedaCodigo=#{monedaCodigo,jdbcType=VARCHAR}</if>
+			<if test="ventaSubTotal != null">,ventaSubTotal=#{ventaSubTotal,jdbcType=DOUBLE}</if>
+			<if test="ventaDescuento != null">,ventaDescuento=#{ventaDescuento,jdbcType=DOUBLE}</if>
+			<if test="ventaTotal != null">,ventaTotal=#{ventaTotal,jdbcType=DOUBLE}</if>
+			<if test="ventaEfectivo != null">,ventaEfectivo=#{ventaEfectivo,jdbcType=DOUBLE}</if>
+			<if test="ventaTarjeta != null">,ventaTarjeta=#{ventaTarjeta,jdbcType=DOUBLE}</if>
+			<if test="ventaReferTarjeta != null">,ventaReferTarjeta=#{ventaReferTarjeta,jdbcType=VARCHAR}</if>
+			<if test="ventaComentario != null">,ventaComentario=#{ventaComentario,jdbcType=VARCHAR}</if>
+			<if test="ventaEstado != null">,ventaEstado=#{ventaEstado,jdbcType=VARCHAR}</if>
+			<if test="ventaFecre != null">,#{ventaFecre,jdbcType=TIMESTAMP}</if>
+			<if test="ventaUscre != null">,#{ventaUscre,jdbcType=VARCHAR}</if>
+			<if test="ventaFemod != null">,#{ventaFemod,jdbcType=TIMESTAMP}</if>
+			<if test="ventaUsmod != null">,#{ventaUsmod,jdbcType=VARCHAR}</if>
+		</set>  
+		where ventaCodigo=#{ventaCodigo,jdbcType=INTEGER}
+	</update>
+	
+	<delete id="delete" parameterType="com.pe.ventas.back.dtos.daos.sql.ventas.VentaSqlDto">
+		DELETE FROM 
+		ventas.ventas  
+		<where>
+			<if test="ventaCodigo != null">ventaCodigo=#{ventaCodigo,jdbcType=INTEGER}</if>
+		</where>
+	</delete>
+
+</mapper>

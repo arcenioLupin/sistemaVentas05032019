@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pe.ventas.back.daos.sql.mapeos.vendedores.VendedorSqlMaper">
+
+	<select id="selectTodosVendedores"  resultType="com.pe.ventas.back.dtos.daos.sql.vendedores.VendedorSqlDto">
+		SELECT * FROM 
+		ventas.vendedores
+	</select>
+
+
+	<select id="selectUnVendedor" parameterType="com.pe.ventas.back.dtos.daos.sql.vendedores.VendedorSqlDto"  resultType="com.pe.ventas.back.dtos.daos.sql.vendedores.VendedorSqlDto">
+		SELECT * FROM 
+		ventas.vendedores
+		<where>
+			<if test="vendedorCodigo != null">vendedorCodigo=#{vendedorCodigo,jdbcType=INTEGER}</if>
+			<if test="vendedorNombre1 != null"> AND vendedorNombre1=#{vendedorNombre1,jdbcType=VARCHAR}</if>
+			<if test="vendedorNombre2 != null"> AND vendedorNombre2=#{vendedorNombre2,jdbcType=VARCHAR}</if>
+			<if test="vendedorApepat != null"> AND vendedorApepat=#{vendedorApepat,jdbcType=VARCHAR}</if>
+			<if test="vendedorApemat != null"> AND vendedorApemat=#{vendedorApemat,jdbcType=VARCHAR}</if>
+			<if test="vendedorDocid != null"> AND vendedorDocid=#{vendedorDocid,jdbcType=VARCHAR}</if>
+			
+		</where>
+	</select>
+
+	<insert id="insert" parameterType="com.pe.ventas.back.dtos.daos.sql.vendedores.VendedorSqlDto" useGeneratedKeys="true" keyProperty="vendedorCodigo">
+		INSERT INTO 
+		ventas.vendedores 
+		(
+			vendedorNombre1,
+			vendedorNombre2,
+			vendedorApepat,
+			vendedorApemat,
+			vendedorDocid,
+			vendedorDireccion,
+			vendedorCelular1,
+			vendedorCelular2,
+			usuarioCodigo,
+			vendedorComentado,
+			vendedorEstado
+			<if test="vendedorFecre != null">,vendedorFecre</if>
+			<if test="vendedorUscre != null">,vendedorUscre</if>
+			<if test="vendedorFemod != null">,vendedorFemod</if>
+			<if test="vendedorUsmod != null">,vendedorUsmod</if>
+		) 
+		VALUES(
+			#{vendedorNombre1,jdbcType=VARCHAR},
+			#{vendedorNombre2,jdbcType=VARCHAR},
+			#{vendedorApepat,jdbcType=VARCHAR},
+			#{vendedorApemat,jdbcType=VARCHAR},
+			#{vendedorDocid,jdbcType=VARCHAR},
+			#{vendedorDireccion,jdbcType=VARCHAR},
+			#{vendedorCelular1,jdbcType=VARCHAR},
+			#{vendedorCelular2,jdbcType=VARCHAR},
+			#{usuarioCodigo,jdbcType=VARCHAR},
+			#{vendedorComentado,jdbcType=VARCHAR},
+			#{vendedorEstado,jdbcType=VARCHAR}
+			<if test="vendedorFecre != null">,#{vendedorFecre,jdbcType=TIMESTAMP}</if>
+			<if test="vendedorUscre != null">,#{vendedorUscre,jdbcType=VARCHAR}</if>
+			<if test="vendedorFemod != null">,#{vendedorFemod,jdbcType=TIMESTAMP}</if>
+			<if test="vendedorUsmod != null">,#{vendedorUsmod,jdbcType=VARCHAR}</if>
+		)
+	</insert>
+	
+	<update id="update" parameterType="com.pe.ventas.back.dtos.daos.sql.vendedores.VendedorSqlDto">
+		UPDATE 
+		ventas.vendedores  
+		<set>
+			<if test="vendedorNombre1 != null">vendedorNombre1=#{vendedorNombre1,jdbcType=VARCHAR}</if>
+			<if test="vendedorNombre2 != null">,vendedorNombre2=#{vendedorNombre2,jdbcType=VARCHAR}</if>
+			<if test="vendedorApepat != null">,vendedorApepat=#{vendedorApepat,jdbcType=VARCHAR}</if>
+			<if test="vendedorApemat != null">,vendedorApemat=#{vendedorApemat,jdbcType=VARCHAR}</if>
+			<if test="vendedorDocid != null">,vendedorDocid=#{vendedorDocid,jdbcType=VARCHAR}</if>
+			<if test="vendedorDireccion != null">,vendedorDireccion=#{vendedorDireccion,jdbcType=VARCHAR}</if>
+		    <if test="vendedorCelular1 != null">,vendedorCelular1=#{vendedorCelular1,jdbcType=VARCHAR}</if>
+			<if test="vendedorCelular2 != null">,vendedorCelular2=#{vendedorCelular2,jdbcType=VARCHAR}</if>
+			<if test="usuarioCodigo != null">,usuarioCodigo=#{usuarioCodigo,jdbcType=VARCHAR}</if>
+			<if test="vendedorComentado != null">,vendedorComentado=#{vendedorComentado,jdbcType=VARCHAR}</if>
+			<if test="vendedorEstado != null">,vendedorEstado=#{vendedorEstado,jdbcType=VARCHAR}</if>
+			<if test="vendedorFecre != null">,#{vendedorFecre,jdbcType=TIMESTAMP}</if>
+			<if test="vendedorUscre != null">,#{vendedorUscre,jdbcType=VARCHAR}</if>
+			<if test="vendedorFemod != null">,#{vendedorFemod,jdbcType=TIMESTAMP}</if>
+			<if test="vendedorUsmod != null">,#{vendedorUsmod,jdbcType=VARCHAR}</if>
+		</set>  
+		where vendedorCodigo=#{vendedorCodigo,jdbcType=INTEGER}
+	</update>
+	
+	<delete id="delete" parameterType="com.pe.ventas.back.dtos.daos.sql.vendedores.VendedorSqlDto">
+		DELETE FROM 
+		ventas.vendedores  
+		<where>
+			<if test="vendedorCodigo != null">vendedorCodigo=#{vendedorCodigo,jdbcType=INTEGER}</if>
+			<if test="vendedorNombre1 != null"> AND vendedorNombre1=#{vendedorNombre1,jdbcType=VARCHAR}</if>
+			<if test="vendedorEstado != null"> AND vendedorEstado=#{categoriaEstado,jdbcType=VARCHAR}</if>
+		</where>
+	</delete>
+
+</mapper>

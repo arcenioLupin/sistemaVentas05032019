@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pe.ventas.back.daos.sql.mapeos.almacenes.AlmacenSqlMaper">
+
+	<select id="selectTodosAlmacenes"  resultType="com.pe.ventas.back.dtos.daos.sql.almacenes.AlmacenSqlDto">
+		SELECT * FROM 
+		ventas.almacenes
+	</select>
+
+
+	<select id="selectUnAlmacen" parameterType="com.pe.ventas.back.dtos.daos.sql.almacenes.AlmacenSqlDto"  resultType="com.pe.ventas.back.dtos.daos.sql.almacenes.AlmacenSqlDto">
+		SELECT * FROM 
+		ventas.almacenes
+		<where>
+			<if test="almacenCodigo != null">almacenCodigo=#{almacenCodigo,jdbcType=INTEGER}</if>
+			<if test="almacenNombre != null"> AND almacenNombre=#{almacenNombre,jdbcType=VARCHAR}</if>
+			<if test="almacenDescripcion != null"> AND almacenDescripcion=#{almacenDescripcion,jdbcType=VARCHAR}</if>
+			
+		</where>
+	</select>
+
+	<insert id="insert" parameterType="com.pe.ventas.back.dtos.daos.sql.almacenes.AlmacenSqlDto" useGeneratedKeys="true" keyProperty="almacenCodigo">
+		INSERT INTO 
+		ventas.almacenes 
+		(
+			almacenNombre,
+			almacenDescripcion,
+			almacenEstado,
+			tipoAlmacenCodigo,
+			almacenDireccion
+			<if test="almacenFecre != null">,almacenFecre</if>
+			<if test="almacenUscre != null">,almacenUscre</if>
+			<if test="almacenFemod != null">,almacenFemod</if>
+			<if test="almacenUsmod != null">,almacenUsmod</if>
+		) 
+		VALUES(
+			#{almacenNombre,jdbcType=VARCHAR},
+			#{almacenDescripcion,jdbcType=VARCHAR},
+			#{almacenEstado,jdbcType=VARCHAR},
+			#{tipoAlmacenCodigo,jdbcType=INTEGER},
+			#{almacenDireccion,jdbcType=VARCHAR}
+			<if test="almacenFecre != null">,#{almacenFecre,jdbcType=TIMESTAMP}</if>
+			<if test="almacenUscre != null">,#{almacenUscre,jdbcType=VARCHAR}</if>
+			<if test="almacenFemod != null">,#{almacenFemod,jdbcType=TIMESTAMP}</if>
+			<if test="almacenUsmod != null">,#{almacenUsmod,jdbcType=VARCHAR}</if>
+		)
+	</insert>
+	
+	<update id="update" parameterType="com.pe.ventas.back.dtos.daos.sql.almacenes.AlmacenSqlDto">
+		UPDATE 
+		ventas.almacenes  
+		<set>
+			<if test="almacenNombre != null">almacenNombre=#{almacenNombre,jdbcType=VARCHAR}</if>
+			<if test="almacenDescripcion != null">,almacenDescripcion=#{almacenDescripcion,jdbcType=VARCHAR}</if>
+			<if test="almacenEstado != null">,almacenEstado=#{almacenEstado,jdbcType=VARCHAR}</if>
+			<if test="tipoAlmacenCodigo != null">,tipoAlmacenCodigo=#{tipoAlmacenCodigo,jdbcType=INTEGER}</if>
+			<if test="almacenDireccion != null">,almacenDireccion=#{almacenDireccion,jdbcType=VARCHAR}</if>
+			<if test="almacenFecre != null">,#{almacenFecre,jdbcType=TIMESTAMP}</if>
+			<if test="almacenUscre != null">,#{almacenUscre,jdbcType=VARCHAR}</if>
+			<if test="almacenFemod != null">,#{almacenFemod,jdbcType=TIMESTAMP}</if>
+			<if test="almacenUsmod != null">,#{almacenUsmod,jdbcType=VARCHAR}</if>
+		</set>  
+		where almacenCodigo=#{almacenCodigo,jdbcType=INTEGER}
+	</update>
+	
+	<delete id="delete" parameterType="com.pe.ventas.back.dtos.daos.sql.almacenes.AlmacenSqlDto">
+		DELETE FROM 
+		ventas.almacenes  
+		<where>
+			<if test="almacenCodigo != null">almacenCodigo=#{almacenCodigo,jdbcType=INTEGER}</if>
+			<if test="almacenNombre != null"> AND almacenNombre=#{almacenNombre,jdbcType=VARCHAR}</if>
+			<if test="almacenEstado != null"> AND almacenEstado=#{almacenEstado,jdbcType=VARCHAR}</if>
+		</where>
+	</delete>
+
+</mapper>

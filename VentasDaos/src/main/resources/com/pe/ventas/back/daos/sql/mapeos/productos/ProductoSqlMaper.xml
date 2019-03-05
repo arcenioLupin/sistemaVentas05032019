@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pe.ventas.back.daos.sql.mapeos.productos.ProductoSqlMaper">
+
+	<select id="selectTodosProductos"  resultType="com.pe.ventas.back.dtos.daos.sql.productos.ProductoSqlDto">
+		SELECT * FROM 
+		ventas.productos
+	</select>
+
+
+	<select id="selectUnProducto" parameterType="com.pe.ventas.back.dtos.daos.sql.productos.ProductoSqlDto"  resultType="com.pe.ventas.back.dtos.daos.sql.productos.ProductoSqlDto">
+		SELECT * FROM 
+		ventas.productos
+		<where>
+			<if test="productoCodigo != null">productoCodigo=#{productoCodigo,jdbcType=INTEGER}</if>
+			<if test="productoNombre != null"> AND productoNombre=#{productoNombre,jdbcType=VARCHAR}</if>
+			<if test="productoDescripcion != null"> AND productoDescripcion=#{productoDescripcion,jdbcType=VARCHAR}</if>
+			
+		</where>
+	</select>
+
+	<insert id="insert" parameterType="com.pe.ventas.back.dtos.daos.sql.productos.ProductoSqlDto" useGeneratedKeys="true" keyProperty="productoCodigo">
+		INSERT INTO 
+		ventas.productos 
+		(
+			productoNombre,
+			productoDescripcion,
+			categoriaCodigo,
+			unidadMedidaCodigo,
+			productoPrecio,
+			monedaCodigo,
+			productoEstado
+			<if test="productoFecre != null">,productoFecre</if>
+			<if test="productoUscre != null">,productoUscre</if>
+			<if test="productoFemod != null">,productoFemod</if>
+			<if test="productoUsmod != null">,productUsMod</if>
+		) 
+		VALUES(
+			#{productoNombre,jdbcType=VARCHAR},
+			#{productoDescripcion,jdbcType=VARCHAR},
+			#{categoriaCodigo,jdbcType=INTEGER},
+			#{unidadMedidaCodigo,jdbcType=VARCHAR},
+			#{productoPrecio,jdbcType=DOUBLE},
+			#{monedaCodigo,jdbcType=VARCHAR},
+			#{productoEstado,jdbcType=VARCHAR}
+			<if test="productoFecre != null">,#{productoFecre,jdbcType=TIMESTAMP}</if>
+			<if test="productoUscre != null">,#{productoUscre,jdbcType=VARCHAR}</if>
+			<if test="productoFemod != null">,#{productoFemod,jdbcType=TIMESTAMP}</if>
+			<if test="productoUsmod != null">,#{productoUsmod,jdbcType=VARCHAR}</if>
+		)
+	</insert>
+	
+	<update id="update" parameterType="com.pe.ventas.back.dtos.daos.sql.productos.ProductoSqlDto">
+		UPDATE 
+		ventas.productos  
+		<set>
+			<if test="productoNombre != null">productoNombre=#{productoNombre,jdbcType=VARCHAR}</if>
+			<if test="productoDescripcion != null">,productoDescripcion=#{productoDescripcion,jdbcType=VARCHAR}</if>
+			<if test="categoriaCodigo != null">,categoriaCodigo=#{categoriaCodigo,jdbcType=VARCHAR}</if>
+			<if test="unidadMedidaCodigo != null">,unidadMedidaCodigo=#{unidadMedidaCodigo,jdbcType=VARCHAR}</if>
+			<if test="productoPrecio != null">,productoPrecio=#{productoPrecio,jdbcType=DOUBLE}</if>
+			<if test="monedaCodigo != null">,monedaCodigo=#{monedaCodigo,jdbcType=VARCHAR}</if>
+			<if test="productoEstado != null">,productoEstado=#{productoEstado,jdbcType=VARCHAR}</if>
+			<if test="productoFecre != null">,#{productoFecre,jdbcType=TIMESTAMP}</if>
+			<if test="productoUscre != null">,#{productoUscre,jdbcType=VARCHAR}</if>
+			<if test="productoFemod != null">,#{productoFemod,jdbcType=TIMESTAMP}</if>
+			<if test="productoUsmod != null">,#{productoUsmod,jdbcType=VARCHAR}</if>
+		</set>  
+		where productoCodigo=#{productoCodigo,jdbcType=INTEGER}
+	</update>
+	
+	<delete id="delete" parameterType="com.pe.ventas.back.dtos.daos.sql.productos.ProductoSqlDto">
+		DELETE FROM 
+		ventas.productos  
+		<where>
+			<if test="productoCodigo != null">productoCodigo=#{productoCodigo,jdbcType=INTEGER}</if>
+			<if test="productoNombre != null"> AND productoNombre=#{productoNombre,jdbcType=VARCHAR}</if>
+			<if test="productoEstado != null"> AND productoEstado=#{productoEstado,jdbcType=VARCHAR}</if>
+		</where>
+	</delete>
+
+</mapper>

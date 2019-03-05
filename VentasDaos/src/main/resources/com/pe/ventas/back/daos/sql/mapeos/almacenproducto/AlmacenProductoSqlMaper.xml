@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pe.ventas.back.daos.sql.mapeos.almacenproducto.AlmacenProductoSqlMaper">
+
+	<select id="selectTodosAlmacenProducto"  resultType="com.pe.ventas.back.dtos.daos.sql.almacenproducto.AlmacenProductoSqlDto">
+		SELECT * FROM 
+		ventas.almacenproducto
+	</select>
+
+
+	<select id="selectUnaAlmacenProducto" parameterType="com.pe.ventas.back.dtos.daos.sql.almacenproducto.AlmacenProductoSqlDto"  resultType="com.pe.ventas.back.dtos.daos.sql.almacenproducto.AlmacenProductoSqlDto">
+		SELECT * FROM 
+		ventas.almacenproducto
+		<where>
+			<if test="almacenCodigo != null">almacenCodigo=#{almacenCodigo,jdbcType=INTEGER}</if>
+			<if test="productoCodigo != null"> AND productoCodigo=#{productoCodigo,jdbcType=VARCHAR}</if>
+			
+		</where>
+	</select>
+
+	<insert id="insert" parameterType="com.pe.ventas.back.dtos.daos.sql.almacenproducto.AlmacenProductoSqlDto" >
+		INSERT INTO 
+		ventas.almacenproducto 
+		(
+			almacenCodigo,
+			productoCodigo
+			<if test="almacenProductoStock != null">,almacenProductoStock</if>
+			<if test="unidadMedidaCodigo != null">,unidadMedidaCodigo</if>
+			<if test="almacenProductoPrecio != null">,almacenProductoPrecio</if>
+			<if test="monedaCodigo != null">,monedaCodigo</if>
+			<if test="almacenProductoEstado != null">,almacenProductoEstado</if>
+		) 
+		VALUES(
+			#{almacenCodigo,jdbcType=INTEGER},
+			#{productoCodigo,jdbcType=INTEGER}
+			<if test="almacenProductoStock != null">,#{almacenProductoStock,jdbcType=INTEGER}</if>
+			<if test="unidadMedidaCodigo != null">,#{unidadMedidaCodigo,jdbcType=VARCHAR}</if>
+			<if test="almacenProductoPrecio != null">,#{almacenProductoPrecio,jdbcType=DOUBLE}</if>
+			<if test="monedaCodigo != null">,#{monedaCodigo,jdbcType=VARCHAR}</if>
+			<if test="almacenProductoEstado != null">,#{almacenProductoEstado,jdbcType=VARCHAR}</if>
+		)
+	</insert>
+	
+	<update id="update" parameterType="com.pe.ventas.back.dtos.daos.sql.almacenproducto.AlmacenProductoSqlDto">
+		UPDATE 
+		ventas.almacenproducto  
+		<set>
+			<if test="almacenProductoStock != null">almacenProductoStock=#{almacenProductoStock,jdbcType=INTEGER}</if>
+			<if test="unidadMedidaCodigo != null">,unidadMedidaCodigo=#{unidadMedidaCodigo,jdbcType=VARCHAR}</if>
+			<if test="almacenProductoPrecio != null">,almacenProductoPrecio=#{almacenProductoPrecio,jdbcType=DOUBLE}</if>
+			<if test="monedaCodigo != null">,monedaCodigo=#{monedaCodigo,jdbcType=VARCHAR}</if>
+			<if test="almacenProductoEstado != null">,almacenProductoEstado=#{almacenProductoEstado,jdbcType=VARCHAR}</if>
+
+		</set>  
+		where almacenCodigo=#{almacenCodigo,jdbcType=INTEGER}
+		and   productoCodigo=#{productoCodigo,jdbcType=INTEGER}
+	</update>
+	
+	<delete id="delete" parameterType="com.pe.ventas.back.dtos.daos.sql.almacenproducto.AlmacenProductoSqlDto">
+		DELETE FROM 
+		ventas.almacenproducto  
+		<where>
+			<if test="almacenCodigo != null">almacenCodigo=#{almacenCodigo,jdbcType=INTEGER}</if>
+			<if test="productoCodigo != null"> AND productoCodigo=#{productoCodigo,jdbcType=INTEGER}</if>
+		</where>
+	</delete>
+
+</mapper>

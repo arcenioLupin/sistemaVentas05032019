@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pe.ventas.back.daos.sql.mapeos.unidadmedida.UnidadMedidaSqlMaper">
+
+	<select id="selectTodasUnidadMedida"  resultType="com.pe.ventas.back.dtos.daos.sql.unidadmedida.UnidadMedidaSqlDto">
+		SELECT * FROM 
+		ventas.unidadesmedida
+	</select>
+
+
+	<select id="selectUnaUnidadMedida" parameterType="com.pe.ventas.back.dtos.daos.sql.unidadmedida.UnidadMedidaSqlDto"  resultType="com.pe.ventas.back.dtos.daos.sql.unidadmedida.UnidadMedidaSqlDto">
+		SELECT * FROM 
+		ventas.unidadesmedida
+		<where>
+			<if test="unidadMedidaCodigo != null">unidadMedidaCodigo=#{unidadMedidaCodigo,jdbcType=VARCHAR}</if>
+			<if test="unidadMedidaSimbolo != null"> AND unidadMedidaSimbolo=#{unidadMedidaSimbolo,jdbcType=VARCHAR}</if>
+			<if test="unidadMedidaNombre != null"> AND unidadMedidaNombre=#{unidadMedidaNombre,jdbcType=VARCHAR}</if>
+			
+		</where>
+	</select>
+
+	<insert id="insert" parameterType="com.pe.ventas.back.dtos.daos.sql.unidadmedida.UnidadMedidaSqlDto" >
+		INSERT INTO 
+		ventas.unidadesmedida 
+		(  
+		    unidadMedidaCodigo,
+			unidadMedidaSimbolo,
+			unidadMedidaNombre
+		) 
+		VALUES(
+		    #{unidadMedidaCodigo,jdbcType=VARCHAR},
+			#{unidadMedidaSimbolo,jdbcType=VARCHAR},
+			#{unidadMedidaNombre,jdbcType=VARCHAR}
+		)
+	</insert>
+	
+	<update id="update" parameterType="com.pe.ventas.back.dtos.daos.sql.unidadmedida.UnidadMedidaSqlDto">
+		UPDATE 
+		ventas.unidadesMedida  
+		<set>
+			<if test="unidadMedidaSimbolo != null">unidadMedidaSimbolo=#{unidadMedidaSimbolo,jdbcType=VARCHAR}</if>
+			<if test="unidadMedidaNombre != null">,unidadMedidaNombre=#{unidadMedidaNombre,jdbcType=VARCHAR}</if>
+			
+		</set>  
+		where unidadMedidaCodigo=#{unidadMedidaCodigo,jdbcType=VARCHAR}
+	</update>
+	
+	<delete id="delete" parameterType="com.pe.ventas.back.dtos.daos.sql.unidadmedida.UnidadMedidaSqlDto">
+		DELETE FROM 
+		ventas.unidadesMedida  
+		<where>
+		    <if test="unidadMedidaCodigo != null">unidadMedidaCodigo=#{unidadMedidaCodigo,jdbcType=VARCHAR}</if>
+			<if test="unidadMedidaNombre != null">AND unidadMedidaNombre=#{unidadMedidaNombre,jdbcType=VARCHAR}</if>
+			<if test="unidadMedidaSimbolo != null"> AND unidadMedidaSimbolo=#{unidadMedidaSimbolo,jdbcType=VARCHAR}</if>
+		</where>
+	</delete>
+
+</mapper>

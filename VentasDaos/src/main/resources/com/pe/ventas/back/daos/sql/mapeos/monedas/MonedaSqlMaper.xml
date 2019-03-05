@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pe.ventas.back.daos.sql.mapeos.monedas.MonedaSqlMaper">
+
+	<select id="selectTodasMonedas"  resultType="com.pe.ventas.back.dtos.daos.sql.monedas.MonedaSqlDto">
+		SELECT * FROM 
+		ventas.monedas
+	</select>
+
+
+	<select id="selectUnaMoneda" parameterType="com.pe.ventas.back.dtos.daos.sql.monedas.MonedaSqlDto"  resultType="com.pe.ventas.back.dtos.daos.sql.monedas.MonedaSqlDto">
+		SELECT * FROM 
+		ventas.monedas
+		<where>
+			<if test="monedaCodigo != null">monedaCodigo=#{monedaCodigo,jdbcType=VARCHAR}</if>
+			<if test="monedaNombre != null"> AND monedaNombre=#{monedaNombre,jdbcType=VARCHAR}</if>
+			<if test="monedaSimbolo != null"> AND monedaSimbolo=#{monedaSimbolo,jdbcType=VARCHAR}</if>
+			
+		</where>
+	</select>
+
+	<insert id="insert" parameterType="com.pe.ventas.back.dtos.daos.sql.monedas.MonedaSqlDto" >
+		INSERT INTO 
+		ventas.monedas 
+		(  
+		    monedaCodigo,
+			monedaNombre,
+			monedaSimbolo
+		) 
+		VALUES(
+		    #{monedaCodigo,jdbcType=VARCHAR},
+			#{monedaNombre,jdbcType=VARCHAR},
+			#{monedaSimbolo,jdbcType=VARCHAR}
+		)
+	</insert>
+	
+	<update id="update" parameterType="com.pe.ventas.back.dtos.daos.sql.monedas.MonedaSqlDto">
+		UPDATE 
+		ventas.monedas  
+		<set>
+			<if test="monedaNombre != null">monedaNombre=#{monedaNombre,jdbcType=VARCHAR}</if>
+			<if test="monedaSimbolo != null">,monedaSimbolo=#{monedaSimbolo,jdbcType=VARCHAR}</if>
+			
+		</set>  
+		where monedaCodigo=#{monedaCodigo,jdbcType=VARCHAR}
+	</update>
+	
+	<delete id="delete" parameterType="com.pe.ventas.back.dtos.daos.sql.monedas.MonedaSqlDto">
+		DELETE FROM 
+		ventas.monedas  
+		<where>
+		    <if test="monedaCodigo != null">monedaCodigo=#{monedaCodigo,jdbcType=VARCHAR}</if>
+			<if test="monedaNombre != null">monedaNombre=#{monedaNombre,jdbcType=VARCHAR}</if>
+			<if test="monedaSimbolo != null"> AND monedaSimbolo=#{monedaSimbolo,jdbcType=VARCHAR}</if>
+		</where>
+	</delete>
+
+</mapper>

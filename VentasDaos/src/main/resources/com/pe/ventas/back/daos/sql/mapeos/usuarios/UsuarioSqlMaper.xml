@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.pe.ventas.back.daos.sql.mapeos.usuarios.UsuarioSqlMaper">
+
+	<select id="selectUnUsuario" parameterType="com.pe.ventas.back.dtos.daos.sql.usuarios.UsuarioSqlDto"  resultType="com.pe.ventas.back.dtos.daos.sql.usuarios.UsuarioSqlDto">
+		SELECT * FROM 
+		ventas.Usuarios
+		<where>
+			<if test="id != null">id=#{id,jdbcType=INTEGER}</if>
+			<if test="alias != null"> AND alias=#{alias,jdbcType=VARCHAR}</if>
+			<if test="correo != null"> AND correo=#{correo,jdbcType=VARCHAR}</if>
+			<if test="contrasenya != null"> AND contrasenya=MD5(#{contrasenya,jdbcType=VARCHAR})</if>
+			
+		</where>
+	</select>
+
+	<insert id="insert" parameterType="com.pe.ventas.back.dtos.daos.sql.usuarios.UsuarioSqlDto" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO 
+		ventas.Usuarios 
+		(
+			alias,
+			correo,
+			contrasenya
+			<if test="acceso != null">,acceso</if>
+			<if test="modificacion != null">,modificacion</if>
+		) 
+		VALUES(
+			#{alias,jdbcType=VARCHAR},
+			#{correo,jdbcType=VARCHAR},
+			MD5(#{contrasenya,jdbcType=VARCHAR})
+			<if test="acceso != null">,#{acceso,jdbcType=TIMESTAMP}</if>
+			<if test="modificacion != null">,#{modificacion,jdbcType=TIMESTAMP}</if>
+		)
+	</insert>
+	
+	<update id="update" parameterType="com.pe.ventas.back.dtos.daos.sql.usuarios.UsuarioSqlDto">
+		UPDATE 
+		ventas.Usuarios 
+		<set>
+			<if test="alias != null">alias=#{alias,jdbcType=VARCHAR},</if>
+			<if test="correo != null">correo=#{correo,jdbcType=VARCHAR},</if>
+			<if test="contrasenya != null">contrasenya=MD5(#{contrasenya,jdbcType=VARCHAR}),</if>
+			<if test="acceso != null">acceso=#{acceso,jdbcType=TIMESTAMP},</if>
+			<if test="modificacion != null">modificacion=#{modificacion,jdbcType=TIMESTAMP}</if>
+		</set>  
+		where id=#{id,jdbcType=INTEGER}
+	</update>
+	
+	<delete id="delete" parameterType="com.pe.ventas.back.dtos.daos.sql.usuarios.UsuarioSqlDto">
+		DELETE FROM 
+		ventas.Usuarios  
+		<where>
+			<if test="id != null">id=#{id,jdbcType=INTEGER}</if>
+			<if test="alias != null"> AND alias=#{alias,jdbcType=VARCHAR}</if>
+			<if test="correo != null"> AND correo=#{correo,jdbcType=VARCHAR}</if>
+		</where>
+	</delete>
+
+</mapper>
