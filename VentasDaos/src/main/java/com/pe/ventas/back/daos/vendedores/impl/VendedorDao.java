@@ -78,7 +78,7 @@ public class VendedorDao implements IVendedorDao {
 	}
 
 	@Override
-	@CacheEvict(value = "categorias", allEntries = true)
+	@CacheEvict(value = "vendedores", allEntries = true)
 	public void limpiarCache() {
         if (LOG.isDebugEnabled()) {
             LOG.debug("Se ejecuto la limpieza del cache vendedores");

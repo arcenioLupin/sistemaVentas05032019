@@ -41,7 +41,7 @@ public class VentaRest implements IVentaRest {
 
 	        path("/api", () -> {
 	            path("/v2", () -> {
-	                get("/Ventas/estadoDelServicio", CONTENT_TYPE,
+	                get("/ventas/estadoDelServicio", CONTENT_TYPE,
 	                        (request, response) -> new ResultResponse.Builder().code(200).message("Funcionando").build());
 	               
 	                get("/ventas", CONTENT_TYPE, (request, response) -> todosLasVentas(request, response));

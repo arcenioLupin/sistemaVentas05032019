@@ -32,7 +32,7 @@
 			ventaTarjeta,
 			ventaReferTarjeta,
 			ventaComentario,
-			ventaEstado,
+			ventaEstado
 			<if test="ventaFecre != null">,ventaFecre</if>
 			<if test="ventaUscre != null">,ventaUscre</if>
 			<if test="ventaFemod != null">,ventaFemod</if>
@@ -51,10 +51,10 @@
 			#{ventaReferTarjeta,jdbcType=VARCHAR},
 			#{ventaComentario,jdbcType=VARCHAR},			
 			#{ventaEstado,jdbcType=VARCHAR}
-			<if test="ventaFecre != null">,#{VentaFecre,jdbcType=TIMESTAMP}</if>
-			<if test="ventaUscre != null">,#{VentaUscre,jdbcType=VARCHAR}</if>
-			<if test="ventaFemod != null">,#{VentaFemod,jdbcType=TIMESTAMP}</if>
-			<if test="ventaUsmod != null">,#{VentaUsmod,jdbcType=VARCHAR}</if>
+			<if test="ventaFecre != null">,#{ventaFecre,jdbcType=TIMESTAMP}</if>
+			<if test="ventaUscre != null">,#{ventaUscre,jdbcType=VARCHAR}</if>
+			<if test="ventaFemod != null">,#{ventaFemod,jdbcType=TIMESTAMP}</if>
+			<if test="ventaUsmod != null">,#{ventaUsmod,jdbcType=VARCHAR}</if>
 		)
 	</insert>
 	
@@ -62,8 +62,9 @@
 		UPDATE 
 		ventas.ventas  
 		<set>
-			<if test="ventaFecha != null">ventaFecha=#{ventaFecha,jdbcType=TIMESTAMP}</if>
-			<if test="almacenCodigo != null">,almacenCodigo=#{almacenCodigo,jdbcType=INTEGER}</if>
+			
+			<if test="almacenCodigo != null">almacenCodigo=#{almacenCodigo,jdbcType=INTEGER}</if>
+			<if test="ventaFecha != null">,ventaFecha=#{ventaFecha,jdbcType=TIMESTAMP}</if>
 			<if test="vendedorCodigo != null">,vendedorCodigo=#{vendedorCodigo,jdbcType=INTEGER}</if>
 			<if test="monedaCodigo != null">,monedaCodigo=#{monedaCodigo,jdbcType=VARCHAR}</if>
 			<if test="ventaSubTotal != null">,ventaSubTotal=#{ventaSubTotal,jdbcType=DOUBLE}</if>
@@ -74,10 +75,10 @@
 			<if test="ventaReferTarjeta != null">,ventaReferTarjeta=#{ventaReferTarjeta,jdbcType=VARCHAR}</if>
 			<if test="ventaComentario != null">,ventaComentario=#{ventaComentario,jdbcType=VARCHAR}</if>
 			<if test="ventaEstado != null">,ventaEstado=#{ventaEstado,jdbcType=VARCHAR}</if>
-			<if test="ventaFecre != null">,#{ventaFecre,jdbcType=TIMESTAMP}</if>
-			<if test="ventaUscre != null">,#{ventaUscre,jdbcType=VARCHAR}</if>
-			<if test="ventaFemod != null">,#{ventaFemod,jdbcType=TIMESTAMP}</if>
-			<if test="ventaUsmod != null">,#{ventaUsmod,jdbcType=VARCHAR}</if>
+			<if test="ventaFecre != null">,ventaFecre=#{ventaFecre,jdbcType=TIMESTAMP}</if>
+			<if test="ventaUscre != null">,ventaUscre=#{ventaUscre,jdbcType=VARCHAR}</if>
+			<if test="ventaFemod != null">,ventaFemod=#{ventaFemod,jdbcType=TIMESTAMP}</if>
+			<if test="ventaUsmod != null">,ventaUsmod=#{ventaUsmod,jdbcType=VARCHAR}</if>
 		</set>  
 		where ventaCodigo=#{ventaCodigo,jdbcType=INTEGER}
 	</update>

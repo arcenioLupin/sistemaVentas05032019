@@ -44,6 +44,7 @@ private static final Logger LOG = LogManager.getLogger(VentaServicio.class);
 		LOG.debug("Insertar VentaServicioDto: "+venta);
 		VentaDaoDto ventaDaoDto = VentaDtoMaper.INSTANCE.VentaServicioDtoAVentaDaoDto(venta);
 		ventaDaoDto.setVentaFecre(new Date());
+		ventaDaoDto.setVentaFecha(new Date());
 		ventaDaoDto = ventaDao.crearVenta(ventaDaoDto);
 		LOG.debug("Resultado VentaDaoDto: "+ventaDaoDto);
 		
