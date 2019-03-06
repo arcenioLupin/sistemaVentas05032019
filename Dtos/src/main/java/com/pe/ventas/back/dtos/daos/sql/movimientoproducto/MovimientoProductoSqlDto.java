@@ -6,12 +6,12 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class MovimientoProductoSqlDto implements Serializable {/**
-	 * 
-	 */
+public class MovimientoProductoSqlDto implements Serializable {
+	
 	private static final long serialVersionUID = 8890526807472273525L;
 	private Integer movimientoCodigo;
 	private Integer productoCodigo;
 	private Integer movimientoProductoCant;
+	
 
 }
