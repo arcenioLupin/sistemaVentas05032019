@@ -35,7 +35,7 @@
 			#{ventaPosicion,jdbcType=INTEGER},
 			#{productoCodigo,jdbcType=INTEGER},
 			#{ventaProductoCant,jdbcType=INTEGER},
-			#{unidadMedidaCodigo,jdbcType=VARCHAR}			
+			#{unidadMedidaCodigo,jdbcType=VARCHAR},			
 			#{ventaProductoPrecio,jdbcType=DOUBLE},
 			#{ventaProductoTotal,jdbcType=DOUBLE}
 		)
