@@ -8,7 +8,7 @@ import com.pe.ventas.back.dtos.daos.sql.ventadetalle.VentaDetalleSqlDto;
 public interface VentaDetalleSqlMaper {
 	
 	public List<VentaDetalleSqlDto> selectTodosVentaDetalle(); 
-	public VentaDetalleSqlDto selectUnVentaDetalle(VentaDetalleSqlDto ventaDetalle);
+	public VentaDetalleSqlDto selectUnaVentaDetalle(VentaDetalleSqlDto ventaDetalle);
 	public Integer insert (VentaDetalleSqlDto ventaDetalle);
 	public Integer update (VentaDetalleSqlDto ventaDetalle);
 	public Integer delete (VentaDetalleSqlDto ventaDetalle);

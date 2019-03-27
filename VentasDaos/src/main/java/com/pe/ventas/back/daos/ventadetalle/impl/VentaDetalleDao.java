@@ -48,7 +48,7 @@ public class VentaDetalleDao implements IVentaDetalleDao{
 	public VentaDetalleDaoDto obtenerUnVentaDetalle(VentaDetalleDaoDto ventaDetalle) {
 		LOG.debug("Obteniendo obj VentaDetalleDaoDto: "+ventaDetalle);
 		VentaDetalleSqlDto ventaDetalleSqlDto = VentaDetalleDtoMaper.INSTANCE.VentaDetalleDaoDtoAVentaDetalleSqlDto(ventaDetalle);
-		ventaDetalleSqlDto = ventaDetalleSqlMaper.selectUnVentaDetalle(ventaDetalleSqlDto);
+		ventaDetalleSqlDto = ventaDetalleSqlMaper.selectUnaVentaDetalle(ventaDetalleSqlDto);
 		return VentaDetalleDtoMaper.INSTANCE.VentaDetalleSqlDtoAVentaDetalleDaoDTo(ventaDetalleSqlDto);
 
 	}

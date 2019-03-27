@@ -14,7 +14,7 @@
 		ventas.ventadetalle
 		<where>
 			<if test="ventaCodigo != null">ventaCodigo=#{ventaCodigo,jdbcType=INTEGER}</if>	
-			<if test="ventaPosicion != null">ventaPosicion=#{ventaPosicion,jdbcType=INTEGER}</if>			
+			<if test="ventaPosicion != null">AND ventaPosicion=#{ventaPosicion,jdbcType=INTEGER}</if>			
 		</where>
 	</select>
 
@@ -46,7 +46,7 @@
 		ventas.ventadetalle  
 		<set>
 			
-			<if test="productoCodigo != null">productoCodigo=#{almacenCodigo,jdbcType=INTEGER}</if>
+			<if test="productoCodigo != null">productoCodigo=#{productoCodigo,jdbcType=INTEGER}</if>
 			<if test="ventaProductoCant != null">,ventaProductoCant=#{ventaProductoCant,jdbcType=INTEGER}</if>
 			<if test="unidadMedidaCodigo != null">,unidadMedidaCodigo=#{unidadMedidaCodigo,jdbcType=VARCHAR}</if>
 			<if test="ventaProductoPrecio != null">,ventaProductoPrecio=#{ventaProductoPrecio,jdbcType=DOUBLE}</if>
@@ -62,7 +62,7 @@
 		ventas.ventadetalle  
 		<where>
 			<if test="ventaCodigo != null">ventaCodigo=#{ventaCodigo,jdbcType=INTEGER}</if>
-			<if test="ventaPosicion != null">ventaPosicion=#{ventaPosicion,jdbcType=INTEGER}</if>
+			<if test="ventaPosicion != null">AND ventaPosicion=#{ventaPosicion,jdbcType=INTEGER}</if>
 		</where>
 	</delete>
 
