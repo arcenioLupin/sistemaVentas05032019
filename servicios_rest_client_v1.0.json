@@ -1,0 +1,4419 @@
+{
+  "front-version": "2.19.1",
+  "version": 3,
+  "nodes": [
+    {
+      "type": "Project",
+      "id": "6f04a238-1a9a-428d-b1b3-4ee6340886fa",
+      "lastModified": "2019-03-26T23:22:43.921-05:00",
+      "name": "Sistema Ventas"
+    },
+    {
+      "type": "Service",
+      "id": "6284d850-c775-4590-84f5-dc51da581999",
+      "lastModified": "2019-02-12T22:02:27.114-05:00",
+      "name": "Almacen Vendedor",
+      "parentId": "6f04a238-1a9a-428d-b1b3-4ee6340886fa"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"codAlmacen\": 1,\n  \"codVendedor\": 1,\n  \"almacenVendedorEstado\": \"A\"\n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenvendedores/actualizar"
+      },
+      "id": "f9133979-fed5-4678-9035-2fbc8c12e6c9",
+      "lastModified": "2019-02-12T23:30:45.650-05:00",
+      "name": "Actualizar Almacen Vendedor",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "6284d850-c775-4590-84f5-dc51da581999"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenvendedores/delete/1/2"
+      },
+      "id": "d5ca3bf2-66ad-4c2d-8c68-46e95fcd050d",
+      "lastModified": "2019-02-13T00:01:57.353-05:00",
+      "name": "Eliminar Almacen Vendeor",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "6284d850-c775-4590-84f5-dc51da581999"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenvendedores/estadoDelServicio"
+      },
+      "id": "9a4c9f4f-1ae1-41e5-ad40-0f71bdc27de3",
+      "lastModified": "2019-02-12T22:05:14.696-05:00",
+      "name": "Estado del Servicio",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "6284d850-c775-4590-84f5-dc51da581999"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"codAlmacen\": 3,\n  \"codVendedor\": 1,\n  \"almacenVendedorEstado\": \"A\"\n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenvendedores"
+      },
+      "id": "46c4e70e-3b3e-4d22-85b7-b5cd84f91dd4",
+      "lastModified": "2019-02-12T23:30:37.649-05:00",
+      "name": "Insertar Almacen Vendedor",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "6284d850-c775-4590-84f5-dc51da581999"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenvendedores/clear"
+      },
+      "id": "4e9fe527-0edc-4011-b4a3-292ce7ac3ed7",
+      "lastModified": "2019-02-12T22:06:57.282-05:00",
+      "name": "Limpiar cache",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "6284d850-c775-4590-84f5-dc51da581999"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenvendedores"
+      },
+      "id": "4c196a50-a80e-4fe1-adb1-12e265dbbfd5",
+      "lastModified": "2019-02-12T22:11:22.447-05:00",
+      "name": "Obtener todos almacen Vendedor",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "6284d850-c775-4590-84f5-dc51da581999"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenvendedores/almacenvendedor/1/1"
+      },
+      "id": "8b744e27-ad5d-401f-b351-287f1fb62ff4",
+      "lastModified": "2019-02-13T00:01:41.074-05:00",
+      "name": "Obtener un Almacen vendedor",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "6284d850-c775-4590-84f5-dc51da581999"
+    },
+    {
+      "type": "Service",
+      "id": "476d0355-e995-4339-ae31-1e8c2d78a12c",
+      "lastModified": "2019-01-21T22:40:38.803-05:00",
+      "name": "Almacen-Producto",
+      "parentId": "6f04a238-1a9a-428d-b1b3-4ee6340886fa"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"codAlmacen\": 2,\n  \"codProducto\": 3,\n  \"almacenProductoStock\":1500,\n  \"unidadMedidaCodigo\":\"UMU\",\n  \"almacenProductoPrecio\": 88.56,\n  \"monedaCodigo\": \"D\" ,\n  \"almacenProductoEstado\": \"A\"\n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenproductos/actualizar"
+      },
+      "id": "e59f0d58-601f-4e84-a54c-86bc9ee76135",
+      "lastModified": "2019-01-25T23:50:33.251-05:00",
+      "name": "Actualizar Almacen Producto",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "476d0355-e995-4339-ae31-1e8c2d78a12c"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenproductos/delete/2/5"
+      },
+      "id": "2096e8ca-2cb4-43b0-afca-5314dac5888c",
+      "lastModified": "2019-01-26T00:04:24.122-05:00",
+      "name": "Eliminar Almacen Producto",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "476d0355-e995-4339-ae31-1e8c2d78a12c"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenproductos/estadoDelServicio"
+      },
+      "id": "6c1e0739-7749-4950-878d-96e28053e746",
+      "lastModified": "2019-01-21T22:41:54.322-05:00",
+      "name": "Estado del Servicio",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "476d0355-e995-4339-ae31-1e8c2d78a12c"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"codAlmacen\": 2,\n  \"codProducto\": 5,\n  \"almacenProductoStock\":1000,\n  \"unidadMedidaCodigo\":\"UMU\",\n  \"almacenProductoPrecio\": 158.56,\n  \"monedaCodigo\": \"D\" ,\n  \"almacenProductoEstado\": \"A\"\n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenproductos"
+      },
+      "id": "b204fd4b-75fb-4b70-8276-010563cf24c8",
+      "lastModified": "2019-01-26T00:03:22.220-05:00",
+      "name": "Insertar Almacen Producto",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "476d0355-e995-4339-ae31-1e8c2d78a12c"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenproductos/clear"
+      },
+      "id": "eac8aeb7-baa6-4d86-85d6-00e3f7af3a5f",
+      "lastModified": "2019-01-21T23:27:06.045-05:00",
+      "name": "Limpiar Cache",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "476d0355-e995-4339-ae31-1e8c2d78a12c"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenproductos"
+      },
+      "id": "8cbff08a-91a8-4c16-81b9-2de5c26812ff",
+      "lastModified": "2019-01-21T23:28:59.499-05:00",
+      "name": "Obtener todos los Almacenes-Productos",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "476d0355-e995-4339-ae31-1e8c2d78a12c"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenproductos/almacenproducto/1/3"
+      },
+      "id": "80a2179d-255f-4443-b613-36562d05e0af",
+      "lastModified": "2019-01-25T23:47:44.636-05:00",
+      "name": "Obtener un Almacen Producto",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "476d0355-e995-4339-ae31-1e8c2d78a12c"
+    },
+    {
+      "type": "Service",
+      "id": "d2995aaa-ab49-4ed7-a35a-331eb6785a73",
+      "lastModified": "2018-11-19T22:27:34.505-05:00",
+      "name": "Almacenes",
+      "parentId": "6f04a238-1a9a-428d-b1b3-4ee6340886fa"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"codigo\":\"3\",\n  \"almacenNombre\":\"ALMACEN EL TAMBO\",\n  \"tipoAlmacenCodigo\":6,\n  \"almacenDireccion\":\"AV.LA MOLINA 3457 LA MOLINA\",\n  \"almacenDescripcion\":\"ALMACEN DE COMESTIBLES\",\n  \"almacenEstado\":\"A\"\n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenes/actualizar"
+      },
+      "id": "60d6cce6-1e7f-4a55-b140-07000a15083e",
+      "lastModified": "2018-11-19T22:43:54.426-05:00",
+      "name": "Actualizar almacen",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "d2995aaa-ab49-4ed7-a35a-331eb6785a73"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenes/delete/4"
+      },
+      "id": "723c073b-d4fa-4500-bb20-b12061e2b464",
+      "lastModified": "2018-11-19T22:51:01.889-05:00",
+      "name": "Eliminar un alamacen",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "d2995aaa-ab49-4ed7-a35a-331eb6785a73"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenes/estadoDelServicio"
+      },
+      "id": "8acb9ef8-6118-4699-9877-112afaa48f3f",
+      "lastModified": "2018-11-19T22:28:52.009-05:00",
+      "name": "Estado del servicio",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "d2995aaa-ab49-4ed7-a35a-331eb6785a73"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"almacenNombre\":\"ALMACEN PRUEBA\",\n  \"tipoAlmacenCodigo\":6,\n  \"almacenDireccion\":\"AV.REVOLUCION 345 V.E.S\",\n  \"almacenDescripcion\":\"ALMACEN DE REPUESTOS MOTOS\",\n  \"almacenEstado\":\"A\"\n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenes"
+      },
+      "id": "7c9527c3-d1b8-4b8b-86f9-ae9dbebb5844",
+      "lastModified": "2018-11-19T22:50:47.482-05:00",
+      "name": "Insertar Almacen",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "d2995aaa-ab49-4ed7-a35a-331eb6785a73"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenes/clear"
+      },
+      "id": "9f7c9fc0-171d-46ec-9620-bcdb30c2cace",
+      "lastModified": "2018-11-19T22:40:23.826-05:00",
+      "name": "Limpiar cache",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "content-type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "d2995aaa-ab49-4ed7-a35a-331eb6785a73"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenes"
+      },
+      "id": "0b51be9a-0963-4f4e-90a3-80b21dc67522",
+      "lastModified": "2018-11-19T22:31:30.521-05:00",
+      "name": "Obtener Todos Almacenes",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "d2995aaa-ab49-4ed7-a35a-331eb6785a73"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/almacenes/almacen/3"
+      },
+      "id": "144ced54-12ba-48c5-b578-e8aae5102790",
+      "lastModified": "2018-11-19T22:49:17.178-05:00",
+      "name": "Obtener un almacen",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "d2995aaa-ab49-4ed7-a35a-331eb6785a73"
+    },
+    {
+      "type": "Service",
+      "id": "e7cb9bff-2bbd-4ca3-8c33-a0cc7ff148ac",
+      "lastModified": "2018-11-19T23:25:34.041-05:00",
+      "name": "Categorias",
+      "parentId": "6f04a238-1a9a-428d-b1b3-4ee6340886fa"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"categoriaCodigo\": \"8\",\n  \"categoriaNombre\":\"CATEGORIA ROPA MUJER\",\n  \"categoriaDescripcion\":\"CATEGORIA QUE AGRUPA ROPA DE MUJER\",\n  \"categoriaEstado\":\"A\"\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/categorias/actualizar"
+      },
+      "id": "9a17de37-bf5e-4043-8c8c-f4b90571a5be",
+      "lastModified": "2018-11-19T23:36:15.837-05:00",
+      "name": "Actualizar categoria",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "e7cb9bff-2bbd-4ca3-8c33-a0cc7ff148ac"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/categorias/delete/12"
+      },
+      "id": "e51189cd-e602-4038-a774-b93703f75051",
+      "lastModified": "2019-01-09T21:38:20.057-05:00",
+      "name": "Eliminar Categoría",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "e7cb9bff-2bbd-4ca3-8c33-a0cc7ff148ac"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/categorias/estadoDelServicio"
+      },
+      "id": "5d625466-3cd6-4335-9d7e-42d18279d4c0",
+      "lastModified": "2018-11-19T23:26:49.099-05:00",
+      "name": "Estado del servicio",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "e7cb9bff-2bbd-4ca3-8c33-a0cc7ff148ac"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"categoriaNombre\":\"CATEGORIA prueba\",\n  \"categoriaDescripcion\":\"CATEGORIA PRUEBA\",\n  \"categoriaEstado\":\"A\"\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/categorias"
+      },
+      "id": "bc66f091-8ab7-4bfb-aab5-06a3161681c9",
+      "lastModified": "2018-11-19T23:38:11.866-05:00",
+      "name": "Inserta una categoria",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "e7cb9bff-2bbd-4ca3-8c33-a0cc7ff148ac"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/categorias/clear"
+      },
+      "id": "d4c10cc4-367e-48e1-8111-ab2dd1d215cf",
+      "lastModified": "2018-11-19T23:27:37.659-05:00",
+      "name": "Limpiar cache",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "e7cb9bff-2bbd-4ca3-8c33-a0cc7ff148ac"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/categorias"
+      },
+      "id": "a5e0a7d5-9a00-446e-ba90-ae6d458865a7",
+      "lastModified": "2018-11-19T23:28:37.204-05:00",
+      "name": "Obtener todas las categorias",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "e7cb9bff-2bbd-4ca3-8c33-a0cc7ff148ac"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/categorias/categoria/5"
+      },
+      "id": "0e2bb596-503d-4efd-9310-fe950f3f4da0",
+      "lastModified": "2018-11-19T23:30:22.730-05:00",
+      "name": "Obtener una categoria",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "e7cb9bff-2bbd-4ca3-8c33-a0cc7ff148ac"
+    },
+    {
+      "type": "Service",
+      "id": "bad609df-053e-44b2-8008-c7bfc6ba01ec",
+      "lastModified": "2019-01-09T21:37:27.572-05:00",
+      "name": "Monedas",
+      "parentId": "6f04a238-1a9a-428d-b1b3-4ee6340886fa"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \n  \"codigo\":\"T\",\n  \"monedaSimbolo\":\"i\",\n  \"monedaNombre\":\"TEST\"\n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/monedas/actualizar"
+      },
+      "id": "a45b9afa-3bac-4392-b348-87418b7e2464",
+      "lastModified": "2019-01-09T21:52:57.553-05:00",
+      "name": "Actualizar moneda",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "bad609df-053e-44b2-8008-c7bfc6ba01ec"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/monedas/delete/T"
+      },
+      "id": "edcb7ea8-9310-48dd-8b65-d55f6cabd341",
+      "lastModified": "2019-01-09T21:57:27.081-05:00",
+      "name": "Eliminar moneda",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "bad609df-053e-44b2-8008-c7bfc6ba01ec"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/monedas/estadoDelServicio"
+      },
+      "id": "2a711c85-93be-4e1b-8b86-aa1147fe3ab9",
+      "lastModified": "2019-01-09T22:00:06.760-05:00",
+      "name": "Estado del servicio",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "bad609df-053e-44b2-8008-c7bfc6ba01ec"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \n  \"codigo\":\"T\",\n  \"monedaSimbolo\":\"t\",\n  \"monedaNombre\":\"TEST\"\n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/monedas"
+      },
+      "id": "e4559d35-0728-4d23-be13-2219e79f662e",
+      "lastModified": "2019-01-09T21:51:31.161-05:00",
+      "name": "Insertar una moneda",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "bad609df-053e-44b2-8008-c7bfc6ba01ec"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/monedas/clear"
+      },
+      "id": "84340d6b-c7ca-4782-92df-70a80f900b08",
+      "lastModified": "2019-01-09T21:50:47.034-05:00",
+      "name": "Limpiar cache",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "bad609df-053e-44b2-8008-c7bfc6ba01ec"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/monedas"
+      },
+      "id": "99cff1e3-51d3-43ad-8381-7a1b7be8e2d4",
+      "lastModified": "2019-01-09T21:41:02.091-05:00",
+      "name": "Obtener todas las monedas",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "bad609df-053e-44b2-8008-c7bfc6ba01ec"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/monedas/moneda/E"
+      },
+      "id": "df1e23d8-4ec7-4ee6-8322-82f33784ff1d",
+      "lastModified": "2019-01-09T21:55:59.601-05:00",
+      "name": "Obtener una moneda",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "bad609df-053e-44b2-8008-c7bfc6ba01ec"
+    },
+    {
+      "type": "Service",
+      "id": "92c1e0d0-bbe0-410b-8092-f7b861d5918f",
+      "lastModified": "2019-02-19T23:07:18.276-05:00",
+      "name": "Movimiento-Producto",
+      "parentId": "6f04a238-1a9a-428d-b1b3-4ee6340886fa"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n    \"codMovimiento\": 2,\n    \"codProducto\": 2,\n    \"movimientoProductoCant\": 60000\n  \n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/movimientoproductos/actualizar"
+      },
+      "id": "1e78d30f-4d7b-45fc-88eb-f1f6aa46225f",
+      "lastModified": "2019-02-19T23:43:48.068-05:00",
+      "name": "Actualizar Movimiento Producto",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "92c1e0d0-bbe0-410b-8092-f7b861d5918f"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/movimientoproductos/delete/2/2"
+      },
+      "id": "59e1dcc3-e15b-4671-a2ed-d80a165099cd",
+      "lastModified": "2019-02-19T23:46:08.769-05:00",
+      "name": "Eliminar Movimiento Producto",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "92c1e0d0-bbe0-410b-8092-f7b861d5918f"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/movimientoproductos/estadoDelServicio"
+      },
+      "id": "6f296c77-3ced-4846-bde7-8b2bdf55257d",
+      "lastModified": "2019-02-19T23:08:43.469-05:00",
+      "name": "Estado del servicio",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "92c1e0d0-bbe0-410b-8092-f7b861d5918f"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n    \"codMovimiento\": 2,\n    \"codProducto\": 2,\n    \"movimientoProductoCant\": 50000\n  \n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/movimientoproductos"
+      },
+      "id": "9ffb7f67-d5bd-46f4-98cc-3709026dfd5d",
+      "lastModified": "2019-02-19T23:37:50.463-05:00",
+      "name": "Insertar Movimiento Producto",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "92c1e0d0-bbe0-410b-8092-f7b861d5918f"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/movimientoproductos/clear"
+      },
+      "id": "6527cbf6-5ca0-48cf-b1e9-51f38ee94f4e",
+      "lastModified": "2019-02-19T23:10:41.044-05:00",
+      "name": "Limpiar cache",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "92c1e0d0-bbe0-410b-8092-f7b861d5918f"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/movimientoproductos"
+      },
+      "id": "91fe4ea9-9061-43e0-a7d0-9cf2cbc4fedb",
+      "lastModified": "2019-02-19T23:40:04.595-05:00",
+      "name": "Obtener todos Movimientos Productos",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "92c1e0d0-bbe0-410b-8092-f7b861d5918f"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/movimientoproductos/movimientoproducto/1/1"
+      },
+      "id": "8134f6e5-250c-41b7-8dc9-80cad35c946d",
+      "lastModified": "2019-02-19T23:41:39.550-05:00",
+      "name": "Obtener un Movimiento Producto",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "92c1e0d0-bbe0-410b-8092-f7b861d5918f"
+    },
+    {
+      "type": "Service",
+      "id": "9f585b0d-6a52-4c45-9495-7e386e1ae5ac",
+      "lastModified": "2018-11-28T21:39:01.808-05:00",
+      "name": "Movimientos",
+      "parentId": "6f04a238-1a9a-428d-b1b3-4ee6340886fa"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"codigo\" :1,\n  \"movimientoFecha\":\"12/12/2018\",\n  \"almacenCodOrigen\":1,\n  \"almacenCodDestino\":2,\n  \"movimientoComentario\":\"Movimiento de mercaderia 2\"\n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/movimientos/actualizar"
+      },
+      "id": "78a36e2d-360a-4da9-8067-79fbe18626ae",
+      "lastModified": "2018-11-28T23:30:33.177-05:00",
+      "name": "Actualizar movimientos",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "9f585b0d-6a52-4c45-9495-7e386e1ae5ac"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/movimientos/delete/4"
+      },
+      "id": "3a68ff54-cb10-4bab-baa7-7be0a925e1dd",
+      "lastModified": "2018-11-28T23:33:05.953-05:00",
+      "name": "Eliminar movimiento",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "9f585b0d-6a52-4c45-9495-7e386e1ae5ac"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/movimientos/estadoDelServicio"
+      },
+      "id": "a15360a7-ff1c-440d-8c66-fb496f4d4486",
+      "lastModified": "2018-11-28T21:53:33.832-05:00",
+      "name": "Estado del servicio",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "9f585b0d-6a52-4c45-9495-7e386e1ae5ac"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \n  \"movimientoFecha\":\"28/11/2018\",\n  \"almacenCodOrigen\":2,\n  \"almacenCodDestino\":1,\n  \"movimientoComentario\":\"Movimiento de mercaderia 3 test\"\n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/movimientos"
+      },
+      "id": "fe625596-ebac-4596-a670-1d6bb1b8efd8",
+      "lastModified": "2018-11-28T23:32:18.739-05:00",
+      "name": "Inserta Movimientos",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "9f585b0d-6a52-4c45-9495-7e386e1ae5ac"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/movimientos/clear"
+      },
+      "id": "b00df6d9-7d35-48c4-855a-5448ba435374",
+      "lastModified": "2018-11-28T23:13:50.504-05:00",
+      "name": "Limpiar cache",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "9f585b0d-6a52-4c45-9495-7e386e1ae5ac"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/movimientos"
+      },
+      "id": "07f062e6-6537-4dd0-b733-92687427f254",
+      "lastModified": "2018-11-28T23:12:44.538-05:00",
+      "name": "Obtener todos los movimientos",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "9f585b0d-6a52-4c45-9495-7e386e1ae5ac"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/movimientos/movimiento/1"
+      },
+      "id": "2941418d-afc8-4af0-81c1-43791fbcf6cb",
+      "lastModified": "2018-11-28T23:17:44.274-05:00",
+      "name": "Obtener un movimiento",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "9f585b0d-6a52-4c45-9495-7e386e1ae5ac"
+    },
+    {
+      "type": "Service",
+      "id": "584d4d9f-53c1-47ba-a642-9f29bbdb22df",
+      "lastModified": "2019-01-09T21:59:10.767-05:00",
+      "name": "Productos",
+      "parentId": "6f04a238-1a9a-428d-b1b3-4ee6340886fa"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \n   \"codigo\": 5,\n  \"productoNombre\": \"PRODUCTO TEST 2\",\n  \"productoDescripcion\": \"PRODUCTO TEST 2\",\n  \"categoriaCodigo\": 5,\n  \"unidadMedidaCodigo\": \"UMU\",\n  \"productoPrecio\": 13.5,\n  \"monedaCodigo\": \"D\",\n  \"productoEstado\": \"A\"\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/productos/actualizar"
+      },
+      "id": "6e31fb60-db48-40fa-8647-bfbef3b3f24e",
+      "lastModified": "2019-01-09T22:10:21.574-05:00",
+      "name": "Actualizar un producto",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "584d4d9f-53c1-47ba-a642-9f29bbdb22df"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/productos/delete/7"
+      },
+      "id": "feecdbdc-5d88-44fb-92e3-82fb069a28cf",
+      "lastModified": "2019-01-09T22:15:18.886-05:00",
+      "name": "Eliminar un producto",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "584d4d9f-53c1-47ba-a642-9f29bbdb22df"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/productos/estadoDelServicio"
+      },
+      "id": "bf0f6f96-f4b0-42ed-a798-89f3546fafe0",
+      "lastModified": "2019-01-09T22:00:57.535-05:00",
+      "name": "Estado del servicio",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "584d4d9f-53c1-47ba-a642-9f29bbdb22df"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"codigo\": 6,\n  \"productoNombre\": \"PRODUCTO TEST 3\",\n  \"productoDescripcion\": \"PRODUCTO TEST 3\",\n  \"categoriaCodigo\": 5,\n  \"unidadMedidaCodigo\": \"UMU\",\n  \"productoPrecio\": 19.5,\n  \"monedaCodigo\": \"E\",\n  \"productoEstado\": \"A\"\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/productos"
+      },
+      "id": "4676a5f2-7036-433f-92df-340c148a6b24",
+      "lastModified": "2019-01-09T22:12:06.856-05:00",
+      "name": "Insertar un producto",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "584d4d9f-53c1-47ba-a642-9f29bbdb22df"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/productos/clear"
+      },
+      "id": "5b7bd586-9d84-4120-9514-fc2ffb098bfe",
+      "lastModified": "2019-01-09T22:03:29.733-05:00",
+      "name": "Limpiar cache",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "584d4d9f-53c1-47ba-a642-9f29bbdb22df"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/productos"
+      },
+      "id": "5b4aefd7-409f-4ffc-b824-00dab5c5de99",
+      "lastModified": "2019-01-09T22:02:14.313-05:00",
+      "name": "Obtener todos los productos",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "584d4d9f-53c1-47ba-a642-9f29bbdb22df"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/productos/producto/5"
+      },
+      "id": "f0f0ef1c-32d2-4db2-bff4-05d93b9cf434",
+      "lastModified": "2019-01-09T22:09:00.381-05:00",
+      "name": "Obtener un producto",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "584d4d9f-53c1-47ba-a642-9f29bbdb22df"
+    },
+    {
+      "type": "Service",
+      "id": "bc05430c-fce3-4600-bd87-941b5dbf479a",
+      "lastModified": "2018-11-19T23:00:32.417-05:00",
+      "name": "Tipo Almacen",
+      "parentId": "6f04a238-1a9a-428d-b1b3-4ee6340886fa"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"codigo\":\"9\",\n  \"tipoAlmacenNombre\":\"TIPO ALMACEN F\",\n  \"tipoAlmacenDescripcion\":\"ALMACEN DE PRODUCTOS QUIMICOS\",\n  \"tipoAlmacenEstado\":\"I\"\n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/tiposAlmacen/actualizar"
+      },
+      "id": "531668c0-d09c-4416-8b06-e3aac2b0b4fd",
+      "lastModified": "2018-11-19T23:13:56.195-05:00",
+      "name": "Actualizar Tipo Almacen",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "bc05430c-fce3-4600-bd87-941b5dbf479a"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/tiposAlmacen/delete/10"
+      },
+      "id": "12dc1b93-c3ed-4d0c-89c9-36fc5df2b7f0",
+      "lastModified": "2018-11-19T23:17:22.915-05:00",
+      "name": "Eliminar unTipoAlmacen",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "bc05430c-fce3-4600-bd87-941b5dbf479a"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/tiposAlmacen/estadoDelServicio"
+      },
+      "id": "d5a0dd3f-f74a-449f-bca9-d29b8100ec16",
+      "lastModified": "2018-11-19T23:02:23.999-05:00",
+      "name": "Estado del servicio",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "bc05430c-fce3-4600-bd87-941b5dbf479a"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n \n  \"tipoAlmacenNombre\":\"TIPO ALMACEN test\",\n  \"tipoAlmacenDescripcion\":\"ALMACEN DE PRODUCTOS TEST\",\n  \"tipoAlmacenEstado\":\"A\"\n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/tiposAlmacen"
+      },
+      "id": "764835f4-12d9-4a43-b8af-b33343de95f3",
+      "lastModified": "2018-11-19T23:16:59.643-05:00",
+      "name": "Insertar TipoAlmacen",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "bc05430c-fce3-4600-bd87-941b5dbf479a"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/tiposAlmacen/clear"
+      },
+      "id": "db2a4470-fb71-4281-9206-beca129435ba",
+      "lastModified": "2018-11-19T23:15:25.915-05:00",
+      "name": "Limpiar cache",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "content-type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "bc05430c-fce3-4600-bd87-941b5dbf479a"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/tiposAlmacen"
+      },
+      "id": "407c8805-f862-40bd-b609-20d862b57d98",
+      "lastModified": "2018-11-19T23:04:19.842-05:00",
+      "name": "Obtener Todos TipoAlmacen",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "bc05430c-fce3-4600-bd87-941b5dbf479a"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/tiposAlmacen/tipoAlmacen/5"
+      },
+      "id": "99f67efb-49b9-4102-ba24-8d8e49dbd518",
+      "lastModified": "2018-11-19T23:07:46.977-05:00",
+      "name": "Obtener un TipoAlmacen",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "bc05430c-fce3-4600-bd87-941b5dbf479a"
+    },
+    {
+      "type": "Service",
+      "id": "6c1b667a-0480-4bd2-8c31-e02d10885e19",
+      "lastModified": "2019-01-09T22:17:17.388-05:00",
+      "name": "Unidades Medida",
+      "parentId": "6f04a238-1a9a-428d-b1b3-4ee6340886fa"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"codigo\":\"UMT\",\n  \"unidadMedidaSimbolo\":\"T\",\n  \"unidadMedidaNombre\":\"TEST2\"\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/unidadmedidas/actualizar"
+      },
+      "id": "7e21c7b4-b10f-4594-b8cd-3207f2e9cfaa",
+      "lastModified": "2019-01-09T22:26:00.940-05:00",
+      "name": "Actualizar unidad de medida",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "6c1b667a-0480-4bd2-8c31-e02d10885e19"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/unidadmedidas/delete/UMT"
+      },
+      "id": "a52a0a8c-86a9-49a4-beae-74f5a43076a5",
+      "lastModified": "2019-01-09T22:27:24.667-05:00",
+      "name": "Eliminar unidad de medida",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "6c1b667a-0480-4bd2-8c31-e02d10885e19"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/unidadmedidas/estadoDelServicio"
+      },
+      "id": "8e152942-d628-45bb-bf36-a0e7b82dfbdd",
+      "lastModified": "2019-01-09T22:18:32.478-05:00",
+      "name": "Estado del servicio",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "6c1b667a-0480-4bd2-8c31-e02d10885e19"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"codigo\":\"UMT\",\n  \"unidadMedidaSimbolo\":\"T\",\n  \"unidadMedidaNombre\":\"TEST\"\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/unidadmedidas"
+      },
+      "id": "d35c0fa8-2d4c-498e-a858-632399057330",
+      "lastModified": "2019-01-09T22:24:40.117-05:00",
+      "name": "Insertar unidad de medida",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "6c1b667a-0480-4bd2-8c31-e02d10885e19"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/unidadmedidas/clear"
+      },
+      "id": "81305c1e-7db5-4c06-aeb4-682858103492",
+      "lastModified": "2019-01-09T22:19:23.738-05:00",
+      "name": "Limpiar cache",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "6c1b667a-0480-4bd2-8c31-e02d10885e19"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/unidadmedidas"
+      },
+      "id": "8bc4cc2b-3507-49a3-b835-b97b70fa370b",
+      "lastModified": "2019-01-09T22:20:30.583-05:00",
+      "name": "Obtener todas las unidades de medida",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "6c1b667a-0480-4bd2-8c31-e02d10885e19"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/unidadmedidas/unidadmedida/UMK"
+      },
+      "id": "14ea1cf3-bac9-4649-b71c-406cd78142eb",
+      "lastModified": "2019-01-09T22:22:02.756-05:00",
+      "name": "Obtener una unidad de medida",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "6c1b667a-0480-4bd2-8c31-e02d10885e19"
+    },
+    {
+      "type": "Service",
+      "id": "57585cca-0906-4b5c-bbdf-17b63bd99e27",
+      "lastModified": "2018-11-19T22:02:46.345-05:00",
+      "name": "Usuarios",
+      "parentId": "6f04a238-1a9a-428d-b1b3-4ee6340886fa"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"id\":1,\n  \"alias\":\"arcenioLupin\",\n  \"correo\":\"arcenioLupin.dev@gmail.com\",\n  \"contrasenya\":\"unbueninicio\"\n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v1/usuarios/actualizar"
+      },
+      "id": "32533f3d-b130-47cc-8519-067af8de5176",
+      "lastModified": "2018-11-19T22:56:52.306-05:00",
+      "name": "Actualizar usuarios",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "57585cca-0906-4b5c-bbdf-17b63bd99e27"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"alias\":\"arceniodev01\",\n  \"correo\":\"arcenio.dev01@gmail.com\",\n  \"contrasenya\":\"unbueninicio\"\n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v1/usuarios/autenticar"
+      },
+      "id": "037bb07e-9746-4fba-ab89-9ada313624ce",
+      "lastModified": "2018-11-19T22:23:13.004-05:00",
+      "name": "Autenticar Usuario",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "57585cca-0906-4b5c-bbdf-17b63bd99e27"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v1/usuarios/delete/33"
+      },
+      "id": "f83ca216-d21a-4ddf-8971-18c1560a1b81",
+      "lastModified": "2018-11-19T22:25:19.473-05:00",
+      "name": "Eliminar Usuario",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "57585cca-0906-4b5c-bbdf-17b63bd99e27"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v1/usuarios/estadoDelServicio"
+      },
+      "id": "573e650e-9f4c-40d1-99fe-da725187ca88",
+      "lastModified": "2018-11-19T22:04:39.683-05:00",
+      "name": "Estado del servicio",
+      "headers": [],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "57585cca-0906-4b5c-bbdf-17b63bd99e27"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"alias\":\"arceniodev02\",\n  \"correo\":\"arcenio.dev02@gmail.com\",\n  \"contrasenya\":\"unbueninicio\"\n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v1/usuarios"
+      },
+      "id": "34d76793-bb00-410d-9059-a72713f7eda1",
+      "lastModified": "2018-11-19T22:24:55.538-05:00",
+      "name": "Insertar Usuario",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "57585cca-0906-4b5c-bbdf-17b63bd99e27"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v1/usuarios/clear"
+      },
+      "id": "37829885-2fd9-409a-998d-00c48ad7a9c6",
+      "lastModified": "2018-11-19T22:40:48.770-05:00",
+      "name": "Limpiar cache",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "57585cca-0906-4b5c-bbdf-17b63bd99e27"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v1/usuarios"
+      },
+      "id": "9dd265c7-7d4d-4166-ae61-2dff89e2c80e",
+      "lastModified": "2018-11-19T22:17:26.618-05:00",
+      "name": "Listar Todos Usuarios",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "57585cca-0906-4b5c-bbdf-17b63bd99e27"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v1/usuarios/usuario/1"
+      },
+      "id": "7d923ede-ad3e-497d-a7f6-f52d3be171a3",
+      "lastModified": "2018-11-19T22:59:25.331-05:00",
+      "name": "Obtener un Usuario",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "57585cca-0906-4b5c-bbdf-17b63bd99e27"
+    },
+    {
+      "type": "Service",
+      "id": "f38c2108-3216-4df5-b331-878c580a0926",
+      "lastModified": "2019-01-09T22:28:50.417-05:00",
+      "name": "Vendedores",
+      "parentId": "6f04a238-1a9a-428d-b1b3-4ee6340886fa"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"codigo\":\"3\",\n  \"vendedorNombre1\":\"PRUEBA2\",\n  \"vendedorNombre2\":\"TEST2\",\n  \"vendedorApepat\":\"TEST2\",\n  \"vendedorApemat\":\"TEST2\",\n  \"vendedorDocid\":\"41917487\",\n  \"vendedorDireccion\":\"Av.Cesar Vallejo 1289 VES\",\n  \"vendedorCelular1\":\"992171543\",\n  \"vendedorCelular2\":\"\",\n  \"usuarioCodigo\":\"TEST2\",\n  \"vendedorComentado\":\"NADA\",\n  \"vendedorEstado\":\"A\"\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/vendedores/actualizar"
+      },
+      "id": "2ae7cc8b-6edb-44dc-9dbb-c347e5aae7ff",
+      "lastModified": "2019-01-09T22:46:26.569-05:00",
+      "name": "Actualizar un vendedor",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "f38c2108-3216-4df5-b331-878c580a0926"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/vendedores/delete/3"
+      },
+      "id": "be6d12c3-e6f2-410f-963d-18d25112cb11",
+      "lastModified": "2019-01-09T22:47:34.195-05:00",
+      "name": "Eliminar vendedor",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "f38c2108-3216-4df5-b331-878c580a0926"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/vendedores/estadoDelServicio"
+      },
+      "id": "0121b226-30b7-4c7b-87ea-63e3b4064dbf",
+      "lastModified": "2019-01-09T22:29:43.968-05:00",
+      "name": "Estado del servicio",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "f38c2108-3216-4df5-b331-878c580a0926"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"codigo\":\"1\",\n  \"vendedorNombre1\":\"PRUEBA\",\n  \"vendedorNombre2\":\"TEST\",\n  \"vendedorApepat\":\"TEST\",\n  \"vendedorApemat\":\"TEST\",\n  \"vendedorDocid\":\"41917487\",\n  \"vendedorDireccion\":\"Av.Cesar Vallejo 1289 VES\",\n  \"vendedorCelular1\":\"992171543\",\n  \"vendedorCelular2\":\"\",\n  \"usuarioCodigo\":\"TEST\",\n  \"vendedorComentado\":\"NADA\",\n  \"vendedorEstado\":\"A\"\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/vendedores"
+      },
+      "id": "85530e52-9251-4895-a1aa-d78e10a59bd8",
+      "lastModified": "2019-01-09T22:42:03.834-05:00",
+      "name": "Insertar  un vendedor",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "f38c2108-3216-4df5-b331-878c580a0926"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/vendedores/clear"
+      },
+      "id": "7f617188-5570-4929-8337-782100f7c33a",
+      "lastModified": "2019-01-09T22:30:36.051-05:00",
+      "name": "Limpiar cache",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "f38c2108-3216-4df5-b331-878c580a0926"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/vendedores"
+      },
+      "id": "1e6dff07-d7cd-429b-851d-88dfea3e6a4a",
+      "lastModified": "2019-01-09T22:43:10.162-05:00",
+      "name": "Obtener todos los vendedores",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "f38c2108-3216-4df5-b331-878c580a0926"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/vendedores/vendedor/2"
+      },
+      "id": "b8465033-db4d-4e9a-a956-528c02a0cbd0",
+      "lastModified": "2019-01-09T22:44:48.968-05:00",
+      "name": "Obtener un vendedor",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "f38c2108-3216-4df5-b331-878c580a0926"
+    },
+    {
+      "type": "Service",
+      "id": "7624acbd-32f7-4f85-b811-844847fde27b",
+      "lastModified": "2019-03-26T22:24:09.517-05:00",
+      "name": "Venta Detalle",
+      "parentId": "6f04a238-1a9a-428d-b1b3-4ee6340886fa"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"codVenta\":2,\n  \"posicionVenta\":2,\n  \"productoCodigo\":3,\n  \"ventaProductoCant\":300,\n  \"unidadMedidaCodigo\":\"UMU\",\n  \"ventaProductoPrecio\":1000.00,\n  \"ventaProductoTotal\":300000.00\n  \n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/ventadetalles/actualizar"
+      },
+      "id": "03a7cf42-b69e-41d7-8b55-475ffd3f982e",
+      "lastModified": "2019-03-26T23:19:29.158-05:00",
+      "name": "Actualizar Detalle Venta",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "7624acbd-32f7-4f85-b811-844847fde27b"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/ventadetalles/estadoDelServicio"
+      },
+      "id": "e33176a6-b145-48ba-9340-ea3bdb34d359",
+      "lastModified": "2019-03-26T22:26:27.191-05:00",
+      "name": "Estado del servicio",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "7624acbd-32f7-4f85-b811-844847fde27b"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n  \"codVenta\":2,\n  \"posicionVenta\":2,\n  \"productoCodigo\":3,\n  \"ventaProductoCant\":300,\n  \"unidadMedidaCodigo\":\"UMU\" ,\n  \"ventaProductoPrecio\":900.00,\n  \"ventaProductoTotal\":270000.00\n  \n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/ventadetalles"
+      },
+      "id": "ecc464e9-8b8c-4e20-b2f6-73895fe035d6",
+      "lastModified": "2019-03-26T22:37:47.183-05:00",
+      "name": "Insertar venta detalle",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "7624acbd-32f7-4f85-b811-844847fde27b"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/ventadetalles/clear"
+      },
+      "id": "042dbb7c-642a-4281-8fbd-8c5b4694de6d",
+      "lastModified": "2019-03-26T22:27:36.356-05:00",
+      "name": "Limpiar cache",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "7624acbd-32f7-4f85-b811-844847fde27b"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/ventadetalles"
+      },
+      "id": "4bd3e293-81f6-4ed4-92db-e0858a35808a",
+      "lastModified": "2019-03-26T22:39:30.967-05:00",
+      "name": "Obtener Todos venta detalle",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "7624acbd-32f7-4f85-b811-844847fde27b"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/ventadetalles/ventadetalle/1/1"
+      },
+      "id": "af6f865e-d40d-4059-a24b-1bdbf0295e3a",
+      "lastModified": "2019-03-26T23:07:02.957-05:00",
+      "name": "Obtener una venta detalle",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "7624acbd-32f7-4f85-b811-844847fde27b"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/ventadetalles/delete/2/2"
+      },
+      "id": "1dffb65a-101a-4dde-ba0c-cf55f985e425",
+      "lastModified": "2019-03-26T23:22:43.921-05:00",
+      "name": "Request 7",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "7624acbd-32f7-4f85-b811-844847fde27b"
+    },
+    {
+      "type": "Service",
+      "id": "a20b46bb-f6f0-4338-98f4-95a3df13f565",
+      "lastModified": "2019-03-05T21:28:56.064-05:00",
+      "name": "Ventas",
+      "parentId": "6f04a238-1a9a-428d-b1b3-4ee6340886fa"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n    \"codVenta\":3,\n    \"almacenCodigo\":2,\n    \"vendedorCodigo\":2,\n    \"monedaCodigo\":\"D\",\n    \"ventaSubTotal\":1300.00,\n    \"ventaDescuento\":20.00,\n    \"ventaTotal\":1280.00,\n    \"ventaEfectivo\":1280.00,\n    \"ventaTarjeta\":0.00,\n    \"ventaReferTarjeta\":\"N\",\n    \"ventaComentario\":\"COMPRA EN EFECTIVO UPDATE\",\n    \"ventaEstado\":\"A\"\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/ventas/actualizar"
+      },
+      "id": "5aa6b300-1dc5-48cb-8664-6b0287b5b0c0",
+      "lastModified": "2019-03-05T22:35:36.106-05:00",
+      "name": "Actualizar Venta",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "a20b46bb-f6f0-4338-98f4-95a3df13f565"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.5",
+        "name": "DELETE"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/ventas/delete/3"
+      },
+      "id": "aeb63e2e-ef7a-4f7a-95ee-762c6eb2a910",
+      "lastModified": "2019-03-05T22:44:19.287-05:00",
+      "name": "Eliminar Venta",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "a20b46bb-f6f0-4338-98f4-95a3df13f565"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/ventas/estadoDelServicio"
+      },
+      "id": "d1c8d350-86ce-4032-909a-faf3fc17f25e",
+      "lastModified": "2019-03-05T21:31:34.855-05:00",
+      "name": "Estado del servicio",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "a20b46bb-f6f0-4338-98f4-95a3df13f565"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+        "name": "PUT"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true,
+        "textBody": "{\n    \"almacenCodigo\":2,\n    \"vendedorCodigo\":2,\n    \"monedaCodigo\":\"D\",\n    \"ventaSubTotal\":1300.00,\n    \"ventaDescuento\":20.00,\n    \"ventaTotal\":1280.00,\n    \"ventaEfectivo\":1280.00,\n    \"ventaTarjeta\":0.00,\n    \"ventaReferTarjeta\":\"N\",\n    \"ventaComentario\":\"COMPRA EN EFECTIVO\",\n    \"ventaEstado\":\"A\"\n\n}"
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/ventas"
+      },
+      "id": "0552f07d-90c9-4e45-b4a4-b9b881588f64",
+      "lastModified": "2019-03-05T22:20:28.420-05:00",
+      "name": "Insertar venta",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "a20b46bb-f6f0-4338-98f4-95a3df13f565"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/ventas/clear"
+      },
+      "id": "f576d31e-9c50-40de-8d1b-270b4d340b8b",
+      "lastModified": "2019-03-05T21:32:33.472-05:00",
+      "name": "Limpiar cache",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "a20b46bb-f6f0-4338-98f4-95a3df13f565"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/ventas"
+      },
+      "id": "8acd5c87-e225-4d5d-a1f9-0e2dba67c52b",
+      "lastModified": "2019-03-05T22:18:16.976-05:00",
+      "name": "Obtener Todas Ventas",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "a20b46bb-f6f0-4338-98f4-95a3df13f565"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+        "name": "GET"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": []
+        },
+        "bodyType": "Text",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "localhost:8080",
+        "path": "/VentasRest/api/v2/ventas/venta/2"
+      },
+      "id": "c4444c63-39fe-4e4b-a5c3-a2d48640abf9",
+      "lastModified": "2019-03-05T22:19:27.928-05:00",
+      "name": "Obtener una venta",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "metaInfo": {
+        "ownerId": "google-oauth2|111978128488671817737"
+      },
+      "parentId": "a20b46bb-f6f0-4338-98f4-95a3df13f565"
+    }
+  ]
+}
