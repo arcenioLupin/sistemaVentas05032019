@@ -8,12 +8,17 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.pe.ventas.back.daos.sql.mapeos.usuarios.UsuarioSqlMaper;
 import com.pe.ventas.back.daos.usuarios.IUsuarioDao;
+import com.pe.ventas.back.daos.usuarios.impl.UsuarioDao;
 import com.pe.ventas.back.dtos.daos.usuarios.UsuarioDaoDto;
+import com.pe.ventas.back.dtos.servicios.usuarios.UsuarioServicioDto;
 
 /**
  *
@@ -30,6 +35,8 @@ import com.pe.ventas.back.dtos.daos.usuarios.UsuarioDaoDto;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:test-integracion-context.xml" })
 public class UsuarioDaoPruebasDeIntegracionTest extends AbstractJUnit4SpringContextTests {
+	
+	
 
     @Test	
     public void validarQueElBeanNoSeaNulo() {
@@ -115,6 +122,26 @@ public class UsuarioDaoPruebasDeIntegracionTest extends AbstractJUnit4SpringCont
         bean.limpiarCache();
 
     }
+    
+    @Test
+    public void autenticandoUsuario() {
+        final IUsuarioDao bean = (IUsuarioDao) applicationContext.getBean("usuarioDao");
+        
+        UsuarioDaoDto usuario = new UsuarioDaoDto();
+        usuario.setAlias("arceniodev01");
+        usuario.setContrasenya("unbueninicio");
+        usuario.setCorreo("arcenio.dev01@gmail.com");
+        UsuarioDaoDto usuario2 = new UsuarioDaoDto();
+        usuario2 = bean.obtenerUnUsuario(usuario);
+        System.out.println(usuario2.aJson());
+
+        Assert.assertNotNull(usuario);
+        Assert.assertFalse("Hubo un error al traer los usuarios",usuario2.getIdentificador() == null);
+        
+            System.out.println(usuario2.aJson());
+        
+    }
+
 
     private UsuarioDaoDto insert() {
         final IUsuarioDao bean = (IUsuarioDao) applicationContext.getBean("usuarioDao");

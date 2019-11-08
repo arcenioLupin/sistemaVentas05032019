@@ -44,9 +44,9 @@ public class UsuarioServicioTest extends AbstractJUnit4SpringContextTests {
     @Test
     public void autenticarUsuarioCorrectamente() {
         final UsuarioServicioDto usuario = new UsuarioServicioDto();
-        usuario.setAlias("rafex");
-        usuario.setContrasenya("12345");
-        usuario.setCorreo("r@gmail.com");
+        usuario.setAlias("arceniodev01");
+        usuario.setContrasenya("unbueninicio");
+        usuario.setCorreo("arcenio.dev01@gmail.com");
         final UsuarioDaoDto usuarioDaoDto = UsuarioDtoMaper.INSTANCE.usuarioServicioDtoAUsuarioDaoDto(usuario);
 
         final UsuarioDaoDto usuarioDaoDtoRespuesta = new UsuarioDaoDto();
