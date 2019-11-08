@@ -22,7 +22,7 @@
 		<jdk.version>1.8</jdk.version>
 		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
 
-		<spark.version>2.7.1</spark.version>
+		<spark.version>2.7.2</spark.version>
         <dbcp2.version>2.2.0</dbcp2.version>
 		<junit.version>4.12</junit.version>
 		<org.springframework.version>4.3.14.RELEASE</org.springframework.version>
