@@ -27,7 +27,7 @@
 		<ehcache.version>2.10.4</ehcache.version>
 		<collections.version>4.1</collections.version>
 
-		<junit.version>4.12</junit.version>
+		<junit.version>4.13.1</junit.version>
 		<org.springframework.version>4.3.14.RELEASE</org.springframework.version>
 
 		<dtos.version>1.0-SNAPSHOT</dtos.version>
