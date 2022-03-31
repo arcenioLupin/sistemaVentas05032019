@@ -28,7 +28,7 @@
 		<collections.version>4.1</collections.version>
 
 		<junit.version>4.12</junit.version>
-		<org.springframework.version>4.3.14.RELEASE</org.springframework.version>
+		<org.springframework.version>5.3.18</org.springframework.version>
 
 		<dtos.version>1.0-SNAPSHOT</dtos.version>
 	</properties>
